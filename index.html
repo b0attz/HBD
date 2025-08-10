@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Happy Birthday</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 20px;
+      font-family: Arial, sans-serif;
+      text-align: center;
+      background: #ffffff;
+      overflow-x: hidden;
+    }
+    h1 {
+      color: #ff69b4;
+      font-size: 3rem;
+      animation: floatText 2.5s ease-in-out infinite;
+      user-select: none;
+    }
+    @keyframes floatText {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-15px); }
+    }
+    p {
+      font-size: 1rem;
+      color: #555;
+      margin-top: -10px;
+      margin-bottom: 30px;
+    }
+    img {
+      max-width: 200px;
+      width: 100%;
+      height: auto;
+      margin-top: 10px;
+      animation: bounceCake 3s ease-in-out infinite;
+      user-select: none;
+    }
+    @keyframes bounceCake {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-20px); }
+    }
+    /* Confetti pieces */
+    .confetti-piece {
+      position: fixed;
+      width: 10px;
+      height: 10px;
+      background-color: #ff69b4;
+      opacity: 0.8;
+      border-radius: 50%;
+      animation: riseConfetti linear forwards;
+      pointer-events: none;
+      mix-blend-mode: screen;
+    }
+    @keyframes riseConfetti {
+      0% {
+        transform: translateY(0) rotate(0deg);
+        opacity: 0.8;
+      }
+      100% {
+        transform: translateY(-100vh) rotate(360deg);
+        opacity: 0;
+      }
+    }
+  </style>
+</head>
+<body>
+  <h1>Happy Birthday!</h1>
+  <p>Hope you have a wonderful day with lots of cake and smiles!</p>
+  <img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBwgHBgkIBwgKCgkLDRYPDQwMDRsUFRAWIB0iIiAdHx8kKDQsJCYxJx8fLT0tMTU3Ojo6Iys/RD84QzQ5OjcBCgoKDQwNGg8PGjclHyU3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3N//AABEIAJQAwwMBEQACEQEDEQH/xAAbAAEAAgMBAQAAAAAAAAAAAAAAAwQBAgUGB//EADwQAAICAQIEAwUECAUFAAAAAAECAAMEBRESITFBE1FhIjJxgZEGUqHRFCMzQ1NyksFCYoKTsRVEg+Hw/8QAGgEBAAMBAQEAAAAAAAAAAAAAAAECAwQFBv/EACsRAQACAgEDAwMEAwEBAAAAAAABAgMRBBIhMRNBUQUUIjJSYZFCsfChcf/aAAwDAQACEQMRAD8A+4wEBAQEBAQEBAjyLFpqa2w7IgJJ8hK3vFKza3iFq1m0xWPdT0fURqGM1hQ1urbMh7eX4Tj4HNry8c2jzEtuTx/QtFd7hPnZAxsW28jfgXcD1m/IyxhxWyT7QyxU9S8V+XL+zuVfYLqMo8Tg+IGPkeo+R3nk/RedbkVtW3mJ/wBuznYqV1en/wA/p23YKpLHYAbkz3LTERMy4YiZnUOdo+ppqPi7IUZG6Hup6GcHB51OX1THt/0Ojk8acExHnf8A0unPQcxAQEBAQEBAQEBAQEBAQEBAQECtqFSXYd1dhKoyHcgb7CZZ8XrYrY5nW4Xx5PTtF49lTRsL9HWy1m3e3bf2dgAN9uXznD9N+m14NbR1b21z8j1ojt4XctFfGtWxeNSvNR3noXx1yVmtu8SwraaTuFTS8NKEZtiLW68R32G52E5uLwMHF36Uedf+NL5r5Ija7lVLdjW1OSFdCrbeRE6clIyUmk+8aUreaWi0ezm6JhClmvLhiyhV2Th9kd55v036XHBm0xbe2+fk+tEREadeeq5iAgICAgICAgICAgICAgICAgIEWSwSh3I34VJ284RM6javphuat7MjkzncDyEmUV37rGQ/h02PtvwqTtITM6hS0pbiLL7252bbDyEmVaRPmXQc7IxPlIXlR0prrfEvtHCr7cC+QG8lSu58uhIXICAgICAgICAgICAgICAgICAgRZLcFLvtvwqTtCJnUbVtLN7Vu+QNi7bqPISZRXeu61e4rpdzzAUnaQmZ0paU99xtutXhViOBfISZVpMz3l0HOyMfISFpnTn6U19hsuvHCH24E8hziVa7nvLowuQEBAQEBAQEBAQEBAQEBAQI3sVOplZtEeVorM+ETZBPuj6zOcvwvGP5R2XOVPIHl085WMk7JpEQr4j5BVnvJVmbcKD0HlLZbd/xlXFWdT1JbHAUmwkptz3MpW078tLRGpQYmTbkF224a9wqbchNcs61pjhnq3vwsl22PtMfTfrMYtO/LaYjXhBiWZHE9tvs8XJU+6BNb5NfplljpPfqWxe/cAynqy09OEi3oT3BmkZIlSaTCYTRQgICAgICAgICAgICAgYPSBSc7tuROSZ3LpiNRoBXuPpHZB7HmZPY7my/eI+Uag3JwqeXEPmI1CN/wcK9OIfSNfybOFfvfhGoTuWdl8zGoO7B4R0BMjsd2GIPkIlMdlqhiU59uU3xzuGN41KWaKEBAQEBAQEBAQEBAQB6QOZqLnCxLLyviBO2+2857Y5iJl1YI9W8U+Xk8rWMy6zfxfCXqFT/AO5zDcvcx8PFSO8bdTS9cW3arMZUs6B+zflJiXFyOFNfyp4dlrEVONnUL5k8pZwamZ1EORm6/VUSmKnjt97oo/ORMu3FwLW73nX+1bH+0Fqvtk0KU86xsf8AmRttf6fGvwt3/l28XMx8peKi1W9O/wBJbbz8mK+OdWhHn6jj4SfrG4rD0rU8z+Uja2Hj3yz2js8zdq+a93iC01+SL7olZl69eHirXpmNu7oep26hY1FiKHVeLiXkD8ppSOp5vM41ePHVWe0vQUoUXYzopXpebadztJLqkBAQEBAQEBAQEBAxvAb+cChrKi3S8lAefhkj5c5neYmsw6OLM1zVn+XltGqratnKhn3789hON7XLvaLa9kGrVV13Kaxwkj2gOkNOLa1q91RFZxszEp5byXROoncL2DiDJv4ByUDcnvtJ05s2X067XNS06qig2VFthtuDzk6YYOTa9umzkPXtuykg+h2lXdE77SiQBrAHJ2JG/OQtPaOzvvjUeAU8NQgXrt+MPLjJfq8s/Y9AL8mw9OEKN/jNsMxE7k+qTM0rD1asCOvOdO4eLqYZ3kjMBAQEBAQEBAQEDBO3M9JEzryK73k+7yHnMbZJ9msU+URZm6kmZ9Uz5aaho68aMp6MNjITvXd5R9K1HFsbwUdl3OzVnfcSmns15WDLH5Sp24+TxHxabge5ZDGnRXJj1qsw3A4QAVI29JMI2lx73x7RbWeY/GSpkpF41KfL1C3KTgIVV6kA9YZ4uPXHO1T5H6SHRMo3otZgUqdv5VJkaTGSsR3lYTD1O1OAU3lD2bkPxjTG2Xj17zMO/oeC+FikXbeI7bkA77eUtEPM5Weua+6+IdIHaW3py6SJc6+stGSYVmkSsV2Bxy6+U3raLQxtWYbyyCAgICAgICBiBWyH4m4d+QnPktudNqRqNoxt3lFpZ4B96TqEblnwm8xHSdUMeG0dMm4OBpHTKdw1Kb9VB+UdMpizU0oetS/0xpPXPyeAn8Jf6RGpOuflt4Y7IPpGpR1fyzwNJ6ZRuDw2PaOmTcMio+gjok6meADqwEdP8o6mCFHIHcxMQncywpKtuJETqdpmNwuK3EAROqJ3DnmNS2koICAgICAgYMCk/vt8Zy2/VLor4aM6VqWdgo7kmVW1M9ohDVm41zlKr63Ydgeche2LJWN2rOljeW2z0zxHzMblGoZ4z5/WT1Sag8RvSOqTpg8RvSOqTpg8R/SOuTpg8RvSOqTpgLsesdUnTDHEfMyNyahjcnvI2nSO66uheO11RfMnaFq1tadVhrTk4+R+xuR/QHnCbY70/VGk0KrdA/VrOmn6XPfykl1SAgICAgICBFbUrHc9duUpakTKYtMPnuZkX33v49rWcLkAE8hznHPl9Thx1pWOmEAJUgg8JHQ9NpDWYiY1L0Om66hRa81uFhy8Tbkfj6y8S8rkcKYnqx/06b6lhonGcivb0O8bcccfLM66XHzftA7bphJwf53G5+kiZd+L6fHnJKvh65l1Wfr28as9QQAR8No21y8HHaPx7S9LiZNWXULKWDDuO4+Ms8nJjtjnVk3Qbnp5wo4Op64K96cHZj3tI5D4SJs9Hj8Hq/LJ/Sjj67nVPvY4uXurACREy6b8HDaO3aXbxNYxMhRvZ4Td1fl+MnbzcnFy0nxsytYxMdTtZ4rdkQ77/OTsx8TLefGnmc3MuzbuO5hsD7KjoolJezhwUxRqqAMUcFW4SOhHIyGkxExqXsvs01mTposyHaxg5CluuwnTjpE13L5/nRGPL00jUO0BtN3CzAQEBAQEBAQNWgl5fUdPw0sustUoAxJIJnHaNT3exg5GWYiKy59GFhZTMMbIsDDsRKOq+fNijd6wy2iOPcvB+KydIjnRPmETaNk78jUfiTI00+9x/wAtDpWYDsKg38rCNStHLxe8s/8AR8/vjsP9Q/ONSfeYflvVpmoVPx11XI47odvxkxCl+Tgt2tMTCS7E1O9NrhkOvkW5SdK1zcek7rpD/wBHzj0x2+o/OV6Wn3eH9zU6VmqeeOR/qH5xqU/d4f3MjSMtv4a/Fo0j73H/AClTRLj71tY+RMaUnm1+G76RVVWXyMjZB12WNKxy7XnVa922HiadexVGscgb8JO0K5MvIpHeNPU6VQmPhIlShV3J2HxnZjj8YeNyL2vkmbLsuxICAgICAgICBgwPO/aHFe/xErPthgwG/Xl0nLkj8np8LLXHMTLk6VgX15QttUoqjoe5mcQ7uTnpanTXvt2vlJeeo6w9644FRKqzbMw7CHRxYpN+7X7PWWeM1fEzV8O537GIW51a9PV4l6DrJeaparkvi4Zev3y2wJ7Q342KMmTUqGk6hkW5QqubjRgdt+0OnlcaladVY7u3tDz1XVLHqwLWq97kN9unPnDbj1i2SIs89pr3fpqCt2sDHZlJ7Sr1ORXH6c77O6d9+hkvMU9UxnysXgq94MDt5yG/Hy1x33ZQ0rBvqyRdaprVAeRPM9oiHVyc9LU6a99vZ4y8NCD0nZXtEPAvO7TKaWVICAgICAgIEd9yUJx2HYQObbqdjfskCep5mTpTbzuuWXeOl/ituw4SQe85s8amJe19LtW9LUtCmmoZde3Dex/m5zDb0p4+KfMJ6tWyi2zcDDvusmJZW4eL2XV1kmvgtxUdehHFtvJ2554Op3Fpb0axTQvDVghFP3X/APUbRfh2t5unGvUd6LR9JLL7G/zDFur4l9ZruotZD1Gw/OQmvEy0ndZhDiZun4jFqaL+I922P94aZMGfJGrWhYOvUD9zb+H5yWX2N/mGj68hBAxWIPm4H9pG144E/uV69WrpJOPg11sep4t/7RtpPDm36ryr5GrZJbiRa1367LIaU4eOPPdUfUst+t2w/wAoAkbbxxcUeyNLL8m5K2tsYk7e9Jr+VtGSKYqTaI8Q9ZTnXVbDiDKOWxnfEdnys23O3Qxc6u9uAjgfyPeNJiVuQkgICAgICBQ1iq6yhTQnGVO5XuR6QiYcVL0ZipbhYdQ42IltqaZtrS5ClihkPaRMRPlfHkvjt1UnUqNukVH9nY4+I3mM8eJ8PSx/VckRq0RKNdMsTfhdT8ZT7e0e7oj6rjt5iYYbByB/hB+Ej0rtY+oYJ92jYl461t8pHp2j2aRzME/5Nf0e4fun+kjot8Lfc4Z/yhjwbe9T/wBMjpt8J9fF7Wj+zwbP4T/0xqfhPrY/3R/bPgXH90/9Mnpsr9xh/dH9sjGu/hNHRb4Vnl4I82huMK8/4NviZPp2+FJ5/Hj/ACbDT7WBBKD5y3oWllP1PDHjclekDf27SR6CWjj/ACyv9XmP00/uV3Hw6cfnUPb+8eZmtcda+Hn5+Zlzxq89vhM7qg9tlA9TLubSxpa235SWVIRSp3Z27+giZWiHflViAgICAgICBBk4mPkja+pH8iRzHzgULNDoHOi66r0DbgfWNo1CBtIyl/Z5NbejpCNImwdRT91S/wDK+0ts00ajOX3sGw+qup/vG0aafr197Byh8KyY2dLU2uvJsbJHxqIjZqWPHA60Xj41GNnSfpA/g3/7R/KNnSeOe2Pkf7RjZpsr3HmuHlH/AMRjZpuEzG93Cu+ew/5jZqW4xdRf/tVX1ewf2jadJF0vPf37aEHoCZGzpTJohP7fMsb0TZY2nS1j6ThUe0KAz/es9o/jITpeAA6CBmAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIH//2Q==" alt="Birthday Cake" />
+
+  <script>
+    // สร้างคอนฟิตี้ลอยขึ้นเรื่อยๆ
+    function createConfettiPiece() {
+      const confetti = document.createElement('div');
+      confetti.classList.add('confetti-piece');
+      confetti.style.left = Math.random() * 100 + 'vw';
+      confetti.style.backgroundColor = `hsl(${Math.random() * 360}, 90%, 65%)`;
+      confetti.style.animationDuration = 3 + Math.random() * 2 + 's';
+      confetti.style.width = 6 + Math.random() * 8 + 'px';
+      confetti.style.height = confetti.style.width;
+      document.body.appendChild(confetti);
+
+      confetti.addEventListener('animationend', () => {
+        confetti.remove();
+      });
+    }
+
+    setInterval(createConfettiPiece, 250);
+  </script>
+</body>
+</html>
